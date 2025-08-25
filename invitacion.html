@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Portada -->
+    <section class="portada">
+        <h1>¡Nos casamos!</h1>
+        <img src="imagen/novios.jpg" alt="novios " class="novios">
+        <div class="nombres">
+            <h2>Rocío Montes</h2>
+            <span>y</span>
+            <h2>Sergio Torres</h2>
+        </div>
+        <p>La boda será el próximo:</p>
+        <div class="fecha">
+            <span>23</span>
+            <span>Agosto</span>
+            <span>2025</span>
+        </div>
+    </section>
+
+    <!-- Contador -->
+    <section class="contador">
+        <h3>Solo faltan:</h3>
+        <div class="tiempo">
+            <div><span id="dias">00</span>
+                <p>DÍAS</p>
+            </div>
+            <div><span id="horas">00</span>
+                <p>HORAS</p>
+            </div>
+            <div><span id="minutos">00</span>
+                <p>MINUTOS</p>
+            </div>
+            <div><span id="segundos">00</span>
+                <p>SEGUNDOS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicaciones -->
+    <section class="ubicaciones">
+        <h2>Ubicaciones</h2>
+
+        <div class="evento">
+            <!-- Icono iglesia elegante -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#b19e88" viewBox="0 0 64 64">
+      <path d="M32 2 L42 12 V28 H52 V62 H12 V28 H22 V12 Z" stroke="#b19e88" stroke-width="2" fill="none"/>
+      <circle cx="32" cy="32" r="4" fill="#b19e88"/>
+    </svg>
+            <h4>Ceremonia Religiosa</h4>
+            <p>Basilica de Guadalupe</p>
+            <button onclick="window.open('https://goo.gl/maps/xyz', '_blank')">Ver en GPS</button>
+        </div>
+
+        <div class="evento">
+            <!-- Icono copas elegantes -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#b19e88" viewBox="0 0 64 64">
+      <path d="M20 10 L24 30 H40 L44 10 Z" stroke="#b19e88" stroke-width="2" fill="none"/>
+      <path d="M20 30 L20 50 H44 V30" stroke="#b19e88" stroke-width="2" fill="none"/>
+      <line x1="20" y1="50" x2="44" y2="50" stroke="#b19e88" stroke-width="2"/>
+    </svg>
+            <h4>Recepción</h4>
+            <p>Hacienda de Cortés</p>
+            <button onclick="window.open('https://goo.gl/maps/abc', '_blank')">Ver en GPS</button>
+        </div>
+    </section>
+    <section class="carrusel">
+        <h2>Nuestros Momentos</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="imagen/bride-1837148_640.jpg" alt="Foto 1"></div>
+                <div class="swiper-slide"><img src="imagen/shoes-8070908_640.jpg" alt="Foto 2"></div>
+                <div class="swiper-slide"><img src="imagen/wedding-6787691_1280.jpg" alt="Foto 3"></div>
+                <div class="swiper-slide"><img src="imagen/wedding-6873668_640.jpg" alt="Foto 3"></div>
+                <!-- Agrega más fotos aquí -->
+            </div>
+            <!-- Paginación -->
+            <div class="swiper-pagination"></div>
+            <!-- Botones de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- dreesscode-->
+    <section class="dresscode">
+        <h2 style="color:white;">Código de Vestimenta</h2>
+
+        <div class="dresscode-item">
+            <img src="imagen/vestido-de-novia (1).png" alt="Vestido">
+            <p class="titulo" style="color:white;">Para mujeres</p>
+            <p style="color:white;">Formal / Vestido Largo</p>
+        </div>
+
+        <div class="dresscode-item">
+            <img src="imagen/traje.png" alt="Traje">
+            <p class="titulo" style="color:white;">Para hombres</p>
+            <p style="color:white;">Formal / Traje</p>
+        </div>
+    </section>
+    <!-- Confirmación de Asistencia -->
+
+
+    <!--Whatsapp-->
+
+    <a href="https://wa.me/1234567890" target="_blank" class="boton-whatsapp">
+        <i class="fab fa-whatsapp"></i> Confirmar Asistencia
+    </a>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            loop: true, // hace que el carrusel sea infinito
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

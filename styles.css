@@ -1,0 +1,447 @@
+/* Reset y tipografía */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f0e8;
+    /* Beige suave */
+    color: #8b7d6b;
+    /* Gris cálido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Tipografía elegante */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Great Vibes', cursive;
+    color: #b19e88;
+    /* Dorado suave */
+}
+
+
+/* Secciones */
+
+section {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Portada */
+
+.portada img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.nombres {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.nombres h2 {
+    font-size: 2rem;
+}
+
+.nombres span {
+    font-size: 1.5rem;
+}
+
+.fecha span {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/* Contador */
+
+.contador .tiempo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.contador .tiempo div {
+    background-color: #ffffff;
+    /* Blanco suave */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contador .tiempo div:hover {
+    box-shadow: 0px 0 15px rgba(177, 158, 136, 0.5);
+    transform: scale(1.05);
+}
+
+.contador .tiempo div span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b19e88;
+    /* Dorado suave */
+}
+
+.contador .tiempo div p {
+    font-size: 0.65rem;
+    margin-top: 2px;
+}
+
+
+/* Secciones con fondo blanco suave */
+
+.ubicaciones .evento,
+.vestimenta div,
+.regalos .detalle-regalo,
+.confirmacion .opcion {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.ubicaciones .evento:hover,
+.vestimenta div:hover,
+.regalos .detalle-regalo:hover,
+.confirmacion .opcion:hover {
+    box-shadow: 0 0 15px rgba(177, 158, 136, 0.3);
+    transform: translateY(-2px);
+}
+
+
+/* Botones sobrios con efecto elegante */
+
+button {
+    background-color: #b19e88;
+    /* Dorado suave */
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(177, 158, 136, 0.6);
+}
+
+
+/* Responsivo */
+
+@media (max-width: 480px) {
+    .contador .tiempo div {
+        width: 60px;
+        height: 60px;
+    }
+    .contador .tiempo div span {
+        font-size: 1.2rem;
+    }
+    .nombres h2 {
+        font-size: 1.5rem;
+    }
+    .nombres span {
+        font-size: 1.2rem;
+    }
+    .fecha span {
+        font-size: 1rem;
+    }
+}
+
+.ubicaciones {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    /* fondo blanco elegante */
+}
+
+.ubicaciones h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #b19e88;
+    margin-bottom: 50px;
+}
+
+.evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    max-width: 250px;
+}
+
+.evento svg {
+    margin-bottom: 15px;
+}
+
+.evento h4 {
+    font-size: 24px;
+    color: #b19e88;
+    margin-bottom: 10px;
+}
+
+.evento p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.evento button {
+    background-color: #b19e88;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.evento button:hover {
+    background-color: #947b61;
+    /* dorado más oscuro al pasar el cursor */
+}
+
+.eventos-container {
+    display: flex;
+    /* activa flexbox */
+    flex-direction: column;
+    /* organiza los eventos verticalmente */
+    align-items: center;
+    /* centra los eventos horizontalmente */
+    gap: 40px;
+    /* espacio entre cada evento */
+}
+
+.ubicaciones {
+    display: flex;
+    flex-direction: column;
+    /* para mantener el título arriba y eventos debajo */
+    align-items: center;
+    /* centra todo horizontalmente */
+}
+
+.carrusel {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.carrusel h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #b19e88;
+    margin-bottom: 30px;
+}
+
+.swiper {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: auto;
+    /* deja que la foto mantenga proporción */
+    height: 400px;
+    /* altura máxima deseada */
+    max-width: 100%;
+    /* no salga del contenedor */
+    object-fit: cover;
+    /* recorta ligeramente para mantener estética */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Flechas de navegación */
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #b19e88 !important;
+    /* dorado */
+    width: 40px !important;
+    height: 40px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* Paginación (dots) */
+
+.swiper-pagination-bullet {
+    background-color: #b19e88 !important;
+    /* dorado */
+    opacity: 0.7 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #947b61 !important;
+    /* dorado más oscuro */
+    opacity: 1 !important;
+}
+
+.novios {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 5px solid #b19e88;
+    /* dorado suave */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease-in-out;
+}
+
+.novios:hover {
+    box-shadow: 0 0 25px #b19e88, 0 0 50px #d4c19c;
+    /* brillo dorado */
+    transform: scale(1.03);
+    /* crece un poquito */
+}
+
+.novios {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 5px solid #b19e88;
+    /* marco dorado */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform: translateY(-50px);
+    /* empieza arriba */
+    animation: descender 1.5s ease-out forwards;
+}
+
+@keyframes descender {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+        /* arriba */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* en su lugar */
+    }
+}
+
+.dresscode {
+    background-color: #c3ab89;
+    /* fondo elegante beige/dorado */
+    color: #fff;
+    /* texto por defecto blanco */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.dresscode h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    margin-bottom: 40px;
+    font-weight: normal;
+    color: #ffffff !important;
+    /* 👈 título en marfil/dorado suave */
+}
+
+.dresscode-item {
+    margin-bottom: 40px;
+}
+
+.dresscode-item img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+    filter: invert(1);
+    /* 👈 hace que los íconos se vean blancos elegantes */
+}
+
+.dresscode-item .titulo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    color: #fff;
+    /* subtítulos en blanco */
+}
+
+.dresscode-item p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+/* what icon*/
+
+.boton-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #D4AF37, #000000);
+    /* Oro metálico y negro */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+    font-family: 'Great Vibes', cursive;
+    /* Tipografía elegante */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espacio entre icono y texto */
+    font-size: 18px;
+}
+
+.boton-whatsapp i {
+    color: #25D366;
+    /* Verde clásico de WhatsApp */
+    font-size: 24px;
+}
+
+.boton-whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 45px;
+}
